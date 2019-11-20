@@ -446,7 +446,7 @@ Item {
                         font.pixelSize: 14
                         font.bold: false
                         color: "white"
-                        text: qsTr("Amount to receive") + " (XMR)"
+                        text: qsTr("Amount to receive") + " (XWP)"
                         themeTransition: false
                     }
 
@@ -494,7 +494,7 @@ Item {
                     }
 
                     MoneroComponents.TextPlain {
-                        // @TODO: When we have XMR/USD rate avi. in the future.
+                        // @TODO: When we have XWP/USD rate avi. in the future.
                         visible: false
                         font.pixelSize: 14
                         font.bold: false

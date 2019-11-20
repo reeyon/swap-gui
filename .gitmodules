@@ -1,4 +1,4 @@
 [submodule "swap"]
 	path = swap
-	url = https://github.com/swap-dev/swap.git
+	url = https://github.com/swap-dev/swap
 	ignore = all

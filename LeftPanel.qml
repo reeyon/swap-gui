@@ -529,7 +529,7 @@ Rectangle {
             }
 
             // ------------- Mining tab ---------------
-            MoneroComponents.MenuButton {
+            /*MoneroComponents.MenuButton {
                 id: miningButton
                 visible: !isAndroid && !isIOS && appWindow.walletMode >= 2
                 anchors.left: parent.left
@@ -551,7 +551,7 @@ Rectangle {
                 anchors.right: parent.right
                 anchors.leftMargin: 16
             }
-
+            */
             // ------------- TxKey tab ---------------
             MoneroComponents.MenuButton {
                 id: txkeyButton

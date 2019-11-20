@@ -3462,7 +3462,7 @@ your input may be required.</source>
     <message>
         <location filename="../main.qml" line="1080"/>
         <source>This address received %1 swap, with %2 confirmation(s).</source>
-        <translation>Этот адрес получил %1 XMR, с %2 подтверждениями.</translation>
+        <translation>Этот адрес получил %1 XWP, с %2 подтверждениями.</translation>
     </message>
     <message>
         <location filename="../main.qml" line="1091"/>
@@ -3554,7 +3554,7 @@ your input may be required.</source>
     <message>
         <location filename="../main.qml" line="1077"/>
         <source>This address received %1 swap, but the transaction is not yet mined</source>
-        <translation>Этот адрес получил %1 XMR, но транзакции все еще не подтверждены майнерами</translation>
+        <translation>Этот адрес получил %1 XWP, но транзакции все еще не подтверждены майнерами</translation>
     </message>
     <message>
         <location filename="../main.qml" line="1084"/>

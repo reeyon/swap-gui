@@ -112,7 +112,7 @@ if ! QMAKE=$(find_command qmake qmake-qt5); then
     exit 1
 fi
 $QMAKE ../swap-wallet-gui.pro "$CONFIG" || exit
-$MAKE || exit 
+$MAKE || exit
 
 # Copy swapd to bin folder
 if [ "$platform" != "mingw32" ] && [ "$ANDROID" != true ]; then
