@@ -47,7 +47,7 @@ import "js/Windows.js" as Windows
 
 ApplicationWindow {
     id: appWindow
-    title: "Monero"
+    title: "Swap"
 
     property var currentItem
     property bool hideBalanceForced: false
@@ -78,7 +78,7 @@ ApplicationWindow {
     readonly property string localDaemonAddress : "localhost:" + getDefaultDaemonRpcPort(persistentSettings.nettype)
     property string currentDaemonAddress;
     property int disconnectedEpoch: 0
-    property int estimatedBlockchainSize: 75 // GB
+    property int estimatedBlockchainSize: 12 // GB
     property alias viewState: rootItem.state
     property string prevSplashText;
     property bool splashDisplayedBeforeButtonRequest;
@@ -86,21 +86,13 @@ ApplicationWindow {
     property bool themeTransition: false
 
     // fiat price conversion
-    property real fiatPriceXMRUSD: 0
-    property real fiatPriceXMREUR: 0
+    property real fiatPriceXWPUSD: 0
+    property real fiatPriceXWPEUR: 0
     property var fiatPriceAPIs: {
         return {
-            "kraken": {
-                "xmrusd": "https://api.kraken.com/0/public/Ticker?pair=XMRUSD",
-                "xmreur": "https://api.kraken.com/0/public/Ticker?pair=XMREUR"
-            },
             "coingecko": {
-                "xmrusd": "https://api.coingecko.com/api/v3/simple/price?ids=monero&vs_currencies=usd",
-                "xmreur": "https://api.coingecko.com/api/v3/simple/price?ids=monero&vs_currencies=eur"
-            },
-            "cryptocompare": {
-                "xmrusd": "https://min-api.cryptocompare.com/data/price?fsym=XMR&tsyms=USD",
-                "xmreur": "https://min-api.cryptocompare.com/data/price?fsym=XMR&tsyms=EUR",
+                "xwpusd": "https://api.coingecko.com/api/v3/simple/price?ids=swap&vs_currencies=usd",
+                "xwpeur": "https://api.coingecko.com/api/v3/simple/price?ids=swap&vs_currencies=eur"
             }
         }
     }
@@ -425,8 +417,8 @@ ApplicationWindow {
     }
 
     function onUriHandler(uri){
-        if(uri.startsWith("monero://")){
-            var address = uri.substring("monero://".length);
+        if(uri.startsWith("swap://")){
+            var address = uri.substring("swap://".length);
 
             var params = {}
             if(address.length === 0) return;
@@ -760,7 +752,7 @@ ApplicationWindow {
 
     function onWalletMoneySent(txId, amount) {
         // refresh transaction history here
-        console.log("monero sent found")
+        console.log("swap sent found")
         currentWallet.history.refresh(currentWallet.currentSubaddressAccount); // this will refresh model
 
         if(middlePanel.state == "History")
@@ -973,7 +965,7 @@ ApplicationWindow {
                     txid_text += ", "
                 txid_text += txid[i]
             }
-            informationPopup.text  = (viewOnly)? qsTr("Transaction saved to file: %1").arg(path) : qsTr("Monero sent successfully: %1 transaction(s) ").arg(txid.length) + txid_text + translationManager.emptyString
+            informationPopup.text  = (viewOnly)? qsTr("Transaction saved to file: %1").arg(path) : qsTr("Swap sent successfully: %1 transaction(s) ").arg(txid.length) + txid_text + translationManager.emptyString
             informationPopup.icon  = StandardIcon.Information
             if (transactionDescription.length > 0) {
                 for (var i = 0; i < txid.length; ++i)
@@ -1053,10 +1045,10 @@ ApplicationWindow {
                 informationPopup.icon = StandardIcon.Critical;
             } else if (received > 0) {
                 if (in_pool) {
-                    informationPopup.text = qsTr("This address received %1 monero, but the transaction is not yet mined").arg(walletManager.displayAmount(received));
+                    informationPopup.text = qsTr("This address received %1 swap, but the transaction is not yet mined").arg(walletManager.displayAmount(received));
                 }
                 else {
-                    informationPopup.text = qsTr("This address received %1 monero, with %2 confirmation(s).").arg(walletManager.displayAmount(received)).arg(confirmations);
+                    informationPopup.text = qsTr("This address received %1 swap, with %2 confirmation(s).").arg(walletManager.displayAmount(received)).arg(confirmations);
                 }
             }
             else {
@@ -1148,29 +1140,13 @@ ApplicationWindow {
 
     function fiatApiParseTicker(resp, currency){
         // parse & validate incoming JSON
-        if(resp._url.startsWith("https://api.kraken.com/0/")){
-            if(resp.hasOwnProperty("error") && resp.error.length > 0 || !resp.hasOwnProperty("result")){
-                appWindow.fiatApiError("Kraken API has error(s)");
-                return;
-            }
-
-            var key = currency === "xmreur" ? "XXMRZEUR" : "XXMRZUSD";
-            var ticker = resp.result[key]["o"];
-            return ticker;
-        } else if(resp._url.startsWith("https://api.coingecko.com/api/v3/")){
-            var key = currency === "xmreur" ? "eur" : "usd";
-            if(!resp.hasOwnProperty("monero") || !resp["monero"].hasOwnProperty(key)){
+        if(resp._url.startsWith("https://api.coingecko.com/api/v3/")){
+            var key = currency === "xwpeur" ? "eur" : "usd";
+            if(!resp.hasOwnProperty("swap") || !resp["swap"].hasOwnProperty(key)){
                 appWindow.fiatApiError("Coingecko API has error(s)");
                 return;
             }
-            return resp["monero"][key];
-        } else if(resp._url.startsWith("https://min-api.cryptocompare.com/data/")){
-            var key = currency === "xmreur" ? "EUR" : "USD";
-            if(!resp.hasOwnProperty(key)){
-                appWindow.fiatApiError("cryptocompare API has error(s)");
-                return;
-            }
-            return resp[key];
+            return resp["swap"][key];
         }
     }
 
@@ -1212,10 +1188,10 @@ ApplicationWindow {
             return;
         }
 
-        if(persistentSettings.fiatPriceCurrency === "xmrusd")
-            appWindow.fiatPriceXMRUSD = ticker;
-        else if(persistentSettings.fiatPriceCurrency === "xmreur")
-            appWindow.fiatPriceXMREUR = ticker;
+        if(persistentSettings.fiatPriceCurrency === "xwpusd")
+            appWindow.fiatPriceXWPUSD = ticker;
+        else if(persistentSettings.fiatPriceCurrency === "xwpeur")
+            appWindow.fiatPriceXWPEUR = ticker;
 
         appWindow.updateBalance();
     }
@@ -1243,9 +1219,9 @@ ApplicationWindow {
 
     function fiatApiCurrencySymbol() {
         switch (persistentSettings.fiatPriceCurrency) {
-            case "xmrusd":
+            case "xwpusd":
                 return "USD";
-            case "xmreur":
+            case "xwpeur":
                 return "EUR";
             default:
                 console.error("unsupported currency", persistentSettings.fiatPriceCurrency);
@@ -1254,7 +1230,7 @@ ApplicationWindow {
     }
 
     function fiatApiConvertToFiat(amount) {
-        var ticker = persistentSettings.fiatPriceCurrency === "xmrusd" ? appWindow.fiatPriceXMRUSD : appWindow.fiatPriceXMREUR;
+        var ticker = persistentSettings.fiatPriceCurrency === "xwpusd" ? appWindow.fiatPriceXWPUSD : appWindow.fiatPriceXWPEUR;
         if(ticker <= 0){
             console.log(fiatApiError("Invalid ticker value: " + ticker));
             return "?.??";
@@ -1346,7 +1322,7 @@ ApplicationWindow {
         id: persistentSettings
         fileName: {
             if(isTails && tailsUsePersistence)
-                return homePath + "/Persistent/Monero/monero-core.conf";
+                return homePath + "/Persistent/Swap/Swap-core.conf";
             return "";
         }
 
@@ -1361,7 +1337,7 @@ ApplicationWindow {
         property var    nettype: NetworkType.MAINNET
         property string payment_id
         property int    restore_height : 0
-        property bool   is_trusted_daemon : false
+        property bool   is_trusted_daemon : true
         property bool   is_recovering : false
         property bool   is_recovering_from_device : false
         property bool   customDecorations : true
@@ -1375,9 +1351,9 @@ ApplicationWindow {
         property bool historyShowAdvanced: false
         property bool historyHumanDates: true
         property string blockchainDataDir: ""
-        property bool useRemoteNode: false
-        property string remoteNodeAddress: ""
-        property string bootstrapNodeAddress: ""
+        property bool useRemoteNode: true
+        property string remoteNodeAddress: "autonode.xwp.fyi"
+        property string bootstrapNodeAddress: "autonode.xwp.fyi"
         property bool segregatePreForkOutputs: true
         property bool keyReuseMitigation2: true
         property int segregationHeight: 0
@@ -1390,8 +1366,8 @@ ApplicationWindow {
 
         property bool fiatPriceEnabled: false
         property bool fiatPriceToggle: false
-        property string fiatPriceProvider: "kraken"
-        property string fiatPriceCurrency: "xmrusd"
+        property string fiatPriceProvider: "coingecko"
+        property string fiatPriceCurrency: "xwpusd"
 
         Component.onCompleted: {
             MoneroComponents.Style.blackTheme = persistentSettings.blackTheme
@@ -1971,7 +1947,7 @@ ApplicationWindow {
         closeWallet(Qt.quit);
     }
 
-    function onWalletCheckUpdatesComplete(update) {
+    /* function onWalletCheckUpdatesComplete(update) {
         if (update === "")
             return
         print("Update found: " + update)
@@ -1995,10 +1971,10 @@ ApplicationWindow {
         } else {
             print("Failed to parse update spec")
         }
-    }
+    } */
 
     function checkUpdates() {
-        walletManager.checkUpdatesAsync("monero-gui", "gui")
+        walletManager.checkUpdatesAsync("swap-gui", "gui")
     }
 
     Timer {
@@ -2059,11 +2035,11 @@ ApplicationWindow {
     function getDefaultDaemonRpcPort(networkType) {
         switch (networkType) {
             case NetworkType.STAGENET:
-                return 38081;
+                return 39950;
             case NetworkType.TESTNET:
-                return 28081;
+                return 29950;
             default:
-                return 18081;
+                return 19950;
         }
     }
 

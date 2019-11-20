@@ -1,4 +1,4 @@
-[submodule "monero"]
-	path = monero
-	url = https://github.com/monero-project/monero
+[submodule "swap"]
+	path = swap
+	url = https://github.com/swap-dev/swap.git
 	ignore = all

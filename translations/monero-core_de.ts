@@ -69,8 +69,8 @@
     </message>
     <message>
         <location filename="../pages/AddressBook.qml" line="105"/>
-        <source>This makes it easier to send or receive Monero and reduces errors when typing in addresses manually.</source>
-        <translation>Dies erleichtert das Senden oder Empfangen von Monero und reduziert Fehler bei der manuellen Adresseingabe.</translation>
+        <source>This makes it easier to send or receive swap and reduces errors when typing in addresses manually.</source>
+        <translation>Dies erleichtert das Senden oder Empfangen von swap und reduziert Fehler bei der manuellen Adresseingabe.</translation>
     </message>
     <message>
         <location filename="../pages/AddressBook.qml" line="120"/>
@@ -498,13 +498,13 @@
     </message>
     <message>
         <location filename="../pages/Keys.qml" line="62"/>
-        <source>WARNING: Do not reuse your Monero keys on another fork, UNLESS this fork has key reuse mitigations built in. Doing so will harm your privacy.</source>
-        <translation>Achtung: Verwende deine Moneroschlüssel nicht auf einer anderen Fork, AUßER diese verfügt über einen Replay-Schutz. Wenn du dies tust, wird deine Privatssphäre gefährdet!</translation>
+        <source>WARNING: Do not reuse your swap keys on another fork, UNLESS this fork has key reuse mitigations built in. Doing so will harm your privacy.</source>
+        <translation>Achtung: Verwende deine swapschlüssel nicht auf einer anderen Fork, AUßER diese verfügt über einen Replay-Schutz. Wenn du dies tust, wird deine Privatssphäre gefährdet!</translation>
     </message>
     <message>
         <location filename="../pages/Keys.qml" line="85"/>
-        <source>WARNING: Copying your seed to clipboard can expose you to malicious software, which may record your seed and steal your Monero. Please write down your seed manually.</source>
-        <translation>ACHTUNG: Deinen Seed in die Zwischenablage zu kopieren, kann dich für bösartige Software verwundbar machen, die deinen Seed und somit deine Monero stehlen könnte. Bitte schreibe deinen Seed händisch auf.</translation>
+        <source>WARNING: Copying your seed to clipboard can expose you to malicious software, which may record your seed and steal your swap. Please write down your seed manually.</source>
+        <translation>ACHTUNG: Deinen Seed in die Zwischenablage zu kopieren, kann dich für bösartige Software verwundbar machen, die deinen Seed und somit deine swap stehlen könnte. Bitte schreibe deinen Seed händisch auf.</translation>
     </message>
     <message>
         <location filename="../pages/Keys.qml" line="106"/>
@@ -903,7 +903,7 @@
     <message>
         <location filename="../pages/Mining.qml" line="65"/>
         <source>Your daemon must be synchronized before you can start mining</source>
-        <translation>Der Hintergrunddienst (monerod) muss mit dem Netzwerk synchronisiert sein, bevor mit dem Mining begonnen werden kann.</translation>
+        <translation>Der Hintergrunddienst (swapd) muss mit dem Netzwerk synchronisiert sein, bevor mit dem Mining begonnen werden kann.</translation>
     </message>
     <message>
         <location filename="../pages/Mining.qml" line="99"/>
@@ -917,12 +917,12 @@
     </message>
     <message>
         <location filename="../pages/Mining.qml" line="71"/>
-        <source>Mining with your computer helps strengthen the Monero network. The more that people mine, the harder it is for the network to be attacked, and every little bit helps.
+        <source>Mining with your computer helps strengthen the swap network. The more that people mine, the harder it is for the network to be attacked, and every little bit helps.
 
-Mining also gives you a small chance to earn some Monero. Your computer will create hashes looking for block solutions. If you find a block, you will get the associated reward. Good luck!</source>
-        <translation>Mit deinem Computer zu minen, hilft dabei, das Monero-Netzwerk zu stärken. Je mehr Leute minen, desto schwieriger kann das Netzwerk angegriffen werden. Jeder kann helfen!
+Mining also gives you a small chance to earn some swap. Your computer will create hashes looking for block solutions. If you find a block, you will get the associated reward. Good luck!</source>
+        <translation>Mit deinem Computer zu minen, hilft dabei, das swap-Netzwerk zu stärken. Je mehr Leute minen, desto schwieriger kann das Netzwerk angegriffen werden. Jeder kann helfen!
 
-Das Mining bietet dir die Möglichkeit, Monero zu verdienen. Dein Computer errechnet dabei Hash-Werte für neue Blöcke. Wenn du einen neuen Block findest, bekommst du die Belohnung dafür. Viel Erfolg!</translation>
+Das Mining bietet dir die Möglichkeit, swap zu verdienen. Dein Computer errechnet dabei Hash-Werte für neue Blöcke. Wenn du einen neuen Block findest, bekommst du die Belohnung dafür. Viel Erfolg!</translation>
     </message>
     <message>
         <location filename="../pages/Mining.qml" line="83"/>
@@ -987,7 +987,7 @@ Das Mining bietet dir die Möglichkeit, Monero zu verdienen. Dein Computer errec
     <message>
         <location filename="../pages/Mining.qml" line="203"/>
         <source>Mining is only available on local daemons. Run a local daemon to be able to mine.&lt;br&gt;</source>
-        <translation>Mining ist nur mit einem lokalen Hintergrunddienst verfügbar. Starte den lokalen Hintergrunddienst (monerod), um zu minen.&lt;br&gt;</translation>
+        <translation>Mining ist nur mit einem lokalen Hintergrunddienst verfügbar. Starte den lokalen Hintergrunddienst (swapd), um zu minen.&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../pages/Mining.qml" line="214"/>
@@ -1260,8 +1260,8 @@ Das Mining bietet dir die Möglichkeit, Monero zu verdienen. Dein Computer errec
     </message>
     <message>
         <location filename="../pages/settings/SettingsInfo.qml" line="100"/>
-        <source>Embedded Monero version: </source>
-        <translation>Eingebundene Monero-Version: </translation>
+        <source>Embedded swap version: </source>
+        <translation>Eingebundene swap-Version: </translation>
     </message>
     <message>
         <location filename="../pages/settings/SettingsInfo.qml" line="130"/>
@@ -1475,13 +1475,13 @@ Die alte Wallet-Cache-Datei wird umbenannt und kann später wiederhergestellt we
     </message>
     <message>
         <location filename="../pages/settings/SettingsNode.qml" line="238"/>
-        <source>Uses a third-party server to connect to the Monero network. Less secure, but easier on your computer.</source>
-        <translation>Verwendet einen Server eines Drittanbieters, um eine Verbindung mit dem Monero-Netzwerk herzustellen. Das ist weniger sicher, aber auch weniger fordernd für deinen Computer.</translation>
+        <source>Uses a third-party server to connect to the swap network. Less secure, but easier on your computer.</source>
+        <translation>Verwendet einen Server eines Drittanbieters, um eine Verbindung mit dem swap-Netzwerk herzustellen. Das ist weniger sicher, aber auch weniger fordernd für deinen Computer.</translation>
     </message>
     <message>
         <location filename="../pages/settings/SettingsNode.qml" line="284"/>
-        <source>To find a remote node, type &apos;Monero remote node&apos; into your favorite search engine. Please ensure the node is run by a trusted third-party.</source>
-        <translation>Tippe in deine bevorzugte Suchmaschine &apos;Monero remote node&apos; ein, um einen Drittanbieter-Node zu finden. Stelle sicher, dass der Node von einem vertrauenswürdigen Drittanbieter ausgeführt wird.</translation>
+        <source>To find a remote node, type &apos;swap remote node&apos; into your favorite search engine. Please ensure the node is run by a trusted third-party.</source>
+        <translation>Tippe in deine bevorzugte Suchmaschine &apos;swap remote node&apos; ein, um einen Drittanbieter-Node zu finden. Stelle sicher, dass der Node von einem vertrauenswürdigen Drittanbieter ausgeführt wird.</translation>
     </message>
     <message>
         <location filename="../pages/settings/SettingsNode.qml" line="292"/>
@@ -1699,8 +1699,8 @@ auswählst. Du kannst das Passwort dann in den Wallet-Einstellungen ändern.</tr
     </message>
     <message>
         <location filename="../pages/SharedRingDB.qml" line="104"/>
-        <source>This page allows you to interact with the shared ring database. This database is meant for use by Monero wallets as well as wallets from Monero clones which reuse the Monero keys.</source>
-        <translation>Diese Seite erlaubt es dir mit der geteilten Ringdatenbank zu interagieren. Diese Datenbank kann sowohl von Monero-Wallets als auch Wallets von Monero-Klonen, welche Monero-Keys wiederbenutzen, verwendet werden.</translation>
+        <source>This page allows you to interact with the shared ring database. This database is meant for use by swap wallets as well as wallets from swap clones which reuse the swap keys.</source>
+        <translation>Diese Seite erlaubt es dir mit der geteilten Ringdatenbank zu interagieren. Diese Datenbank kann sowohl von swap-Wallets als auch Wallets von swap-Klonen, welche swap-Keys wiederbenutzen, verwendet werden.</translation>
     </message>
     <message>
         <location filename="../pages/SharedRingDB.qml" line="117"/>
@@ -1716,8 +1716,8 @@ auswählst. Du kannst das Passwort dann in den Wallet-Einstellungen ändern.</tr
     </message>
     <message>
         <location filename="../pages/SharedRingDB.qml" line="120"/>
-        <source>In order to obscure which inputs in a Monero transaction are being spent, a third party should not be able to tell which inputs in a ring are already known to be spent. Being able to do so would weaken the protection afforded by ring signatures. If all but one of the inputs are known to be already spent, then the input being actually spent becomes apparent, thereby nullifying the effect of ring signatures, one of the three main layers of privacy protection Monero uses.&lt;br&gt;To help transactions avoid those inputs, a list of known spent ones can be used to avoid using them in new transactions. Such a list is maintained by the Monero project and is available on the getmonero.org website, and you can import this list here.&lt;br&gt;Alternatively, you can scan the blockchain (and the blockchain of key-reusing Monero clones) yourself using the monero-blockchain-mark-spent-outputs tool to create a list of known spent outputs.&lt;br&gt;</source>
-        <translation>Um zu verschleiern, welche Inputs in einer Monero-Transaktion ausgegeben werden, sollte ein Dritter nicht erkennen können, welche Inputs in einem Ring bereits bekannt sind. Dies würde den Schutz durch Ringsignaturen schwächen. Wenn alle bis auf einen der Inputs bereits ausgegeben sind, wird der tatsächlich ausgegebene Input sichtbar, wodurch die Wirkung von Ringsignaturen – eine der drei Hauptebenen der Privatsphäre, die Monero verwendet – zunichte gemacht wird. Um diese Inputs zu vermeiden, kann eine Liste bekannter Ausgaben verwendet werden, um die Verwendung in neuen Transaktionen zu vermeiden. Eine solche Liste wird vom Monero-Projekt verwaltet und ist auf der Website getmonero.org verfügbar. Du kannst diese Liste hier importieren.&lt;br&gt;Alternativ kannst du die Blockchain (und die Blockchain der Monero-Klone) selbst mit dem „Monero Blockchain mark spent outputs“-Tool scannen, um eine Liste der bekannten Outputs zu erstellen.&lt;br&gt;</translation>
+        <source>In order to obscure which inputs in a swap transaction are being spent, a third party should not be able to tell which inputs in a ring are already known to be spent. Being able to do so would weaken the protection afforded by ring signatures. If all but one of the inputs are known to be already spent, then the input being actually spent becomes apparent, thereby nullifying the effect of ring signatures, one of the three main layers of privacy protection swap uses.&lt;br&gt;To help transactions avoid those inputs, a list of known spent ones can be used to avoid using them in new transactions. Such a list is maintained by the swap project and is available on the getswap.org website, and you can import this list here.&lt;br&gt;Alternatively, you can scan the blockchain (and the blockchain of key-reusing swap clones) yourself using the swap-blockchain-mark-spent-outputs tool to create a list of known spent outputs.&lt;br&gt;</source>
+        <translation>Um zu verschleiern, welche Inputs in einer swap-Transaktion ausgegeben werden, sollte ein Dritter nicht erkennen können, welche Inputs in einem Ring bereits bekannt sind. Dies würde den Schutz durch Ringsignaturen schwächen. Wenn alle bis auf einen der Inputs bereits ausgegeben sind, wird der tatsächlich ausgegebene Input sichtbar, wodurch die Wirkung von Ringsignaturen – eine der drei Hauptebenen der Privatsphäre, die swap verwendet – zunichte gemacht wird. Um diese Inputs zu vermeiden, kann eine Liste bekannter Ausgaben verwendet werden, um die Verwendung in neuen Transaktionen zu vermeiden. Eine solche Liste wird vom swap-Projekt verwaltet und ist auf der Website getswap.org verfügbar. Du kannst diese Liste hier importieren.&lt;br&gt;Alternativ kannst du die Blockchain (und die Blockchain der swap-Klone) selbst mit dem „swap Blockchain mark spent outputs“-Tool scannen, um eine Liste der bekannten Outputs zu erstellen.&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../pages/SharedRingDB.qml" line="141"/>
@@ -1787,13 +1787,13 @@ auswählst. Du kannst das Passwort dann in den Wallet-Einstellungen ändern.</tr
     </message>
     <message>
         <location filename="../pages/SharedRingDB.qml" line="257"/>
-        <source>In order to avoid nullifying the protection afforded by Monero&apos;s ring signatures, an output should not be spent with different rings on different blockchains. While this is normally not a concern, it can become one when a key-reusing Monero clone allows you to spend existing outputs. In this case, you need to ensure this existing outputs uses the same ring on both chains.&lt;br&gt;This will be done automatically by Monero and any key-reusing software which is not trying to actively strip you of your privacy.&lt;br&gt;If you are using a key-reusing Monero clone too, and this clone does not include this protection, you can still ensure your transactions are protected by spending on the clone first, then manually adding the ring on this page, which allows you to then spend your Monero safely.&lt;br&gt;If you do not use a key-reusing Monero clone without these safety features, then you do not need to do anything as it is all automated.&lt;br&gt;</source>
-        <translation>Um zu vermeiden, die durch Ringsignaturen gewährte Privatsphäre zu verletzen, sollte eine Transaktion nicht mit verschiedenen Verschleierungspartnern(Ringe) auf mehreren Blockchains ausgegeben werden. Normalerweise ist das kein Problem; erlaubt ein Monero-Klon allerdings die Wiederbenutzung von Transaktionsschlüsselbildern, kann es jedoch eines werden. In diesem Fall musst du sicherstellen, dass die gleichen Verschleierungspartner auf beiden Blockchains verwendet werden.&lt;br&gt; Monero tut dies automatisch und jede andere Software auch, die dich nicht aktiv um deine Privatsphäre bringen möchte.&lt;br&gt;Solltest du neben Monero noch einen Klon benutzen und sollte dieser nicht sicherstellen, dass deine Privatsphäre geschützt wird, kannst du dies immernoch manuell tun, indem du zuerst eine Transaktion im Klon durchführst und anschließend die beteiligten Partner hier einfügst.&lt;br&gt;Wenn du keine Monero-Klone benutzt, brauchst du nichts zu tun. Monero macht das für dich.&lt;br&gt;</translation>
+        <source>In order to avoid nullifying the protection afforded by swap&apos;s ring signatures, an output should not be spent with different rings on different blockchains. While this is normally not a concern, it can become one when a key-reusing swap clone allows you to spend existing outputs. In this case, you need to ensure this existing outputs uses the same ring on both chains.&lt;br&gt;This will be done automatically by swap and any key-reusing software which is not trying to actively strip you of your privacy.&lt;br&gt;If you are using a key-reusing swap clone too, and this clone does not include this protection, you can still ensure your transactions are protected by spending on the clone first, then manually adding the ring on this page, which allows you to then spend your swap safely.&lt;br&gt;If you do not use a key-reusing swap clone without these safety features, then you do not need to do anything as it is all automated.&lt;br&gt;</source>
+        <translation>Um zu vermeiden, die durch Ringsignaturen gewährte Privatsphäre zu verletzen, sollte eine Transaktion nicht mit verschiedenen Verschleierungspartnern(Ringe) auf mehreren Blockchains ausgegeben werden. Normalerweise ist das kein Problem; erlaubt ein swap-Klon allerdings die Wiederbenutzung von Transaktionsschlüsselbildern, kann es jedoch eines werden. In diesem Fall musst du sicherstellen, dass die gleichen Verschleierungspartner auf beiden Blockchains verwendet werden.&lt;br&gt; swap tut dies automatisch und jede andere Software auch, die dich nicht aktiv um deine Privatsphäre bringen möchte.&lt;br&gt;Solltest du neben swap noch einen Klon benutzen und sollte dieser nicht sicherstellen, dass deine Privatsphäre geschützt wird, kannst du dies immernoch manuell tun, indem du zuerst eine Transaktion im Klon durchführst und anschließend die beteiligten Partner hier einfügst.&lt;br&gt;Wenn du keine swap-Klone benutzt, brauchst du nichts zu tun. swap macht das für dich.&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../pages/SharedRingDB.qml" line="279"/>
-        <source>This records rings used by outputs spent on Monero on a key reusing chain, so that the same ring may be reused to avoid privacy issues.</source>
-        <translation>Hier werden Verschleierungspartner(Ringe) aufgezeichnet, die von Transaktionen verwendet wurden, die bei einem Monero-Klon ausgegeben wurden, sodass derselbe Ring wiederverwendet werden kann, um Privatsphäreprobleme zu vermeiden.</translation>
+        <source>This records rings used by outputs spent on swap on a key reusing chain, so that the same ring may be reused to avoid privacy issues.</source>
+        <translation>Hier werden Verschleierungspartner(Ringe) aufgezeichnet, die von Transaktionen verwendet wurden, die bei einem swap-Klon ausgegeben wurden, sodass derselbe Ring wiederverwendet werden kann, um Privatsphäreprobleme zu vermeiden.</translation>
     </message>
     <message>
         <location filename="../pages/SharedRingDB.qml" line="290"/>
@@ -1833,12 +1833,12 @@ auswählst. Du kannst das Passwort dann in den Wallet-Einstellungen ändern.</tr
     <message>
         <location filename="../pages/SharedRingDB.qml" line="376"/>
         <source>I intend to spend on key-reusing fork(s)</source>
-        <translation>Ich habe vor auf einem Monero-Klon Ausgaben zu tätigen, der Transaktionsschlüsselbilder wiederverwendet</translation>
+        <translation>Ich habe vor auf einem swap-Klon Ausgaben zu tätigen, der Transaktionsschlüsselbilder wiederverwendet</translation>
     </message>
     <message>
         <location filename="../pages/SharedRingDB.qml" line="388"/>
         <source>I might want to spend on key-reusing fork(s)</source>
-        <translation>Ich möchte vielleicht mit einem Monero-Klon, der Transaktionsschlüsselbilder wiederverwendet, Ausgaben tätigen</translation>
+        <translation>Ich möchte vielleicht mit einem swap-Klon, der Transaktionsschlüsselbilder wiederverwendet, Ausgaben tätigen</translation>
     </message>
     <message>
         <location filename="../pages/SharedRingDB.qml" line="400"/>
@@ -1977,8 +1977,8 @@ auswählst. Du kannst das Passwort dann in den Wallet-Einstellungen ändern.</tr
     </message>
     <message>
         <location filename="../pages/Sign.qml" line="344"/>
-        <source>Enter the Monero Address (example: 44AFFq5kSiGBoZ...)</source>
-        <translation>Gebe die Monero-Adresse ein (Beispiel: 44AFFq5kSiGBoZ...)</translation>
+        <source>Enter the swap Address (example: 44AFFq5kSiGBoZ...)</source>
+        <translation>Gebe die swap-Adresse ein (Beispiel: 44AFFq5kSiGBoZ...)</translation>
     </message>
     <message>
         <location filename="../pages/Sign.qml" line="355"/>
@@ -2351,8 +2351,8 @@ Ringgröße: </translation>
     </message>
     <message>
         <location filename="../pages/Transfer.qml" line="622"/>
-        <source>Monero sent successfully</source>
-        <translation>Monero erfolgreich gesendet</translation>
+        <source>swap sent successfully</source>
+        <translation>swap erfolgreich gesendet</translation>
     </message>
     <message>
         <location filename="../pages/Transfer.qml" line="686"/>
@@ -2665,8 +2665,8 @@ deine Eingabe könnte erforderlich sein.</translation>
     </message>
     <message>
         <location filename="../wizard/WizardCreateWallet3.qml" line="60"/>
-        <source>To be able to communicate with the Monero network your wallet needs to be connected to a Monero node. For best privacy it&apos;s recommended to run your own node.</source>
-        <translation>Um mit dem Monero-Netzwerk kommunizieren zu können, muss deine Wallet mit einem Monero-Node verbunden sein. Es wird für einen optimalen Datenschutz empfohlen, einen eigenen Node zu betreiben.</translation>
+        <source>To be able to communicate with the swap network your wallet needs to be connected to a swap node. For best privacy it&apos;s recommended to run your own node.</source>
+        <translation>Um mit dem swap-Netzwerk kommunizieren zu können, muss deine Wallet mit einem swap-Node verbunden sein. Es wird für einen optimalen Datenschutz empfohlen, einen eigenen Node zu betreiben.</translation>
     </message>
 </context>
 <context>
@@ -2716,8 +2716,8 @@ deine Eingabe könnte erforderlich sein.</translation>
     </message>
     <message>
         <location filename="../wizard/WizardDaemonSettings.qml" line="121"/>
-        <source>Additionally, you may specify a bootstrap node to use Monero immediately.</source>
-        <translation>Zusätzlich kannst du eine Bootstrap-Node einstellen, um Monero sofort zu nutzen.</translation>
+        <source>Additionally, you may specify a bootstrap node to use swap immediately.</source>
+        <translation>Zusätzlich kannst du eine Bootstrap-Node einstellen, um swap sofort zu nutzen.</translation>
     </message>
     <message>
         <location filename="../wizard/WizardDaemonSettings.qml" line="175"/>
@@ -2729,8 +2729,8 @@ deine Eingabe könnte erforderlich sein.</translation>
     <name>WizardHome</name>
     <message>
         <location filename="../wizard/WizardHome.qml" line="61"/>
-        <source>Welcome to Monero.</source>
-        <translation>Willkommen bei Monero.</translation>
+        <source>Welcome to swap.</source>
+        <translation>Willkommen bei swap.</translation>
     </message>
     <message>
         <location filename="../wizard/WizardHome.qml" line="66"/>
@@ -2739,8 +2739,8 @@ deine Eingabe könnte erforderlich sein.</translation>
     </message>
     <message>
         <location filename="../wizard/WizardHome.qml" line="67"/>
-        <source>Choose this option if this is your first time using Monero.</source>
-        <translation>Wähle diese Option, wenn du Monero zum ersten Mal verwendest.</translation>
+        <source>Choose this option if this is your first time using swap.</source>
+        <translation>Wähle diese Option, wenn du swap zum ersten Mal verwendest.</translation>
     </message>
     <message>
         <location filename="../wizard/WizardHome.qml" line="87"/>
@@ -2749,8 +2749,8 @@ deine Eingabe könnte erforderlich sein.</translation>
     </message>
     <message>
         <location filename="../wizard/WizardHome.qml" line="88"/>
-        <source>Connect your hardware wallet to create a new Monero wallet.</source>
-        <translation>Verbinde deine Hardware-Wallet, um eine neue Monero-Wallet zu erstellen.</translation>
+        <source>Connect your hardware wallet to create a new swap wallet.</source>
+        <translation>Verbinde deine Hardware-Wallet, um eine neue swap-Wallet zu erstellen.</translation>
     </message>
     <message>
         <location filename="../wizard/WizardHome.qml" line="107"/>
@@ -2807,8 +2807,8 @@ deine Eingabe könnte erforderlich sein.</translation>
     </message>
     <message>
         <location filename="../wizard/WizardLang.qml" line="102"/>
-        <source>Change the language of the Monero GUI.</source>
-        <translation>Ändere die Sprache der Benutzeroberfläche von Monero.</translation>
+        <source>Change the language of the swap GUI.</source>
+        <translation>Ändere die Sprache der Benutzeroberfläche von swap.</translation>
     </message>
     <message>
         <location filename="../wizard/WizardLang.qml" line="197"/>
@@ -2848,8 +2848,8 @@ deine Eingabe könnte erforderlich sein.</translation>
     </message>
     <message>
         <location filename="../wizard/WizardModeBootstrap.qml" line="84"/>
-        <source>Temporary use of remote nodes is useful in order to use Monero immediately (hence the name bootstrap), however be aware that when using remote nodes (including with the bootstrap setting), nodes could track your IP address, track your &quot;restore height&quot; and associated block request data, and send you inaccurate information to learn more about transactions you make.</source>
-        <translation>Ein temporärer Gebrauch von Drittanbieter-Nodes ist nützlich, um Monero unverzüglich zu verwenden (daher der Name Bootstrap). Beachte jedoch, dass Drittanbieter-Nodes (auch mit der Bootstrap-Einstellung) deine IP-Adresse nachverfolgen-, deine Wiederherstellungshöhe und zugehörige Blockanfragen ermitteln-, sowie dir verfälschte Informationen bereitstellen können, um mehr über deine Transaktionen herauszufinden.</translation>
+        <source>Temporary use of remote nodes is useful in order to use swap immediately (hence the name bootstrap), however be aware that when using remote nodes (including with the bootstrap setting), nodes could track your IP address, track your &quot;restore height&quot; and associated block request data, and send you inaccurate information to learn more about transactions you make.</source>
+        <translation>Ein temporärer Gebrauch von Drittanbieter-Nodes ist nützlich, um swap unverzüglich zu verwenden (daher der Name Bootstrap). Beachte jedoch, dass Drittanbieter-Nodes (auch mit der Bootstrap-Einstellung) deine IP-Adresse nachverfolgen-, deine Wiederherstellungshöhe und zugehörige Blockanfragen ermitteln-, sowie dir verfälschte Informationen bereitstellen können, um mehr über deine Transaktionen herauszufinden.</translation>
     </message>
     <message>
         <location filename="../wizard/WizardModeBootstrap.qml" line="97"/>
@@ -2876,8 +2876,8 @@ deine Eingabe könnte erforderlich sein.</translation>
     </message>
     <message>
         <location filename="../wizard/WizardModeRemoteNodeWarning.qml" line="72"/>
-        <source>This mode is ideal for managing small amounts of Monero. You have access to basic features for making and managing transactions. It will automatically connect to the Monero network so you can start using Monero immediately.</source>
-        <translation>Dieser Modus ist ideal für die Verwaltung kleiner Mengen von Monero. Du hast Zugriff auf grundlegende Funktionen zur Durchführung und Verwaltung von Transaktionen. Er verbindet sich automatisch mit dem Monero-Netzwerk, sodass du Monero sofort nutzen kannst.</translation>
+        <source>This mode is ideal for managing small amounts of swap. You have access to basic features for making and managing transactions. It will automatically connect to the swap network so you can start using swap immediately.</source>
+        <translation>Dieser Modus ist ideal für die Verwaltung kleiner Mengen von swap. Du hast Zugriff auf grundlegende Funktionen zur Durchführung und Verwaltung von Transaktionen. Er verbindet sich automatisch mit dem swap-Netzwerk, sodass du swap sofort nutzen kannst.</translation>
     </message>
     <message>
         <location filename="../wizard/WizardModeRemoteNodeWarning.qml" line="85"/>
@@ -3085,10 +3085,10 @@ deine Eingabe könnte erforderlich sein.</translation>
     </message>
     <message>
         <location filename="../wizard/WizardRestoreWallet3.qml" line="68"/>
-        <source>To be able to communicate with the Monero network your wallet needs to be connected to a Monero node. For best privacy it&apos;s recommended to run your own node.
+        <source>To be able to communicate with the swap network your wallet needs to be connected to a swap node. For best privacy it&apos;s recommended to run your own node.
 
 If you don&apos;t have the option to run your own node, there&apos;s an option to connect to a remote node.</source>
-        <translation>Um mit dem Monero-Netzwerk kommunizieren zu können, muss deine Wallet mit einem Monero-Node verbunden sein. Es wird für einen optimalen Datenschutz empfohlen, einen eigenen Node zu betreiben.
+        <translation>Um mit dem swap-Netzwerk kommunizieren zu können, muss deine Wallet mit einem swap-Node verbunden sein. Es wird für einen optimalen Datenschutz empfohlen, einen eigenen Node zu betreiben.
 
 Wenn du keinen eigenen Node betreiben kannst, gibt es die Möglichkeit, sich mit einem Drittanbieter-Node zu verbinden.</translation>
     </message>
@@ -3232,8 +3232,8 @@ Wenn du keinen eigenen Node betreiben kannst, gibt es die Möglichkeit, sich mit
     </message>
     <message>
         <location filename="../main.qml" line="1077"/>
-        <source>This address received %1 monero, but the transaction is not yet mined</source>
-        <translation>Diese Adresse hat %1 Monero empfangen, aber die Transaktion wurde noch nicht bestätigt</translation>
+        <source>This address received %1 swap, but the transaction is not yet mined</source>
+        <translation>Diese Adresse hat %1 swap empfangen, aber die Transaktion wurde noch nicht bestätigt</translation>
     </message>
     <message>
         <location filename="../main.qml" line="2114"/>
@@ -3445,8 +3445,8 @@ deine Eingabe könnte erforderlich sein.</translation>
     </message>
     <message>
         <location filename="../main.qml" line="997"/>
-        <source>Monero sent successfully: %1 transaction(s) </source>
-        <translation>Monero erfolgreich gesendet: %1 Transaktion(en)</translation>
+        <source>swap sent successfully: %1 transaction(s) </source>
+        <translation>swap erfolgreich gesendet: %1 Transaktion(en)</translation>
     </message>
     <message>
         <location filename="../main.qml" line="1037"/>
@@ -3474,8 +3474,8 @@ deine Eingabe könnte erforderlich sein.</translation>
     </message>
     <message>
         <location filename="../main.qml" line="1080"/>
-        <source>This address received %1 monero, with %2 confirmation(s).</source>
-        <translation>Diese Adresse hat %1 Monero erhalten, mit %2 Bestätigung(en).</translation>
+        <source>This address received %1 swap, with %2 confirmation(s).</source>
+        <translation>Diese Adresse hat %1 swap erhalten, mit %2 Bestätigung(en).</translation>
     </message>
     <message>
         <location filename="../main.qml" line="1091"/>
@@ -3551,13 +3551,13 @@ deine Eingabe könnte erforderlich sein.</translation>
     </message>
     <message>
         <location filename="../main.qml" line="2170"/>
-        <source>New version of Monero v.%1 is available.&lt;br&gt;&lt;br&gt;Download:&lt;br&gt;%2&lt;br&gt;&lt;br&gt;SHA256 Hash:&lt;br&gt;%3</source>
-        <translation>Neue Version von Monero v.%1 ist verfügbar.&lt;br&gt;&lt;br&gt;Herunterladen:&lt;br&gt;%2&lt;br&gt;&lt;br&gt;SHA256 Hash:&lt;br&gt;%3</translation>
+        <source>New version of swap v.%1 is available.&lt;br&gt;&lt;br&gt;Download:&lt;br&gt;%2&lt;br&gt;&lt;br&gt;SHA256 Hash:&lt;br&gt;%3</source>
+        <translation>Neue Version von swap v.%1 ist verfügbar.&lt;br&gt;&lt;br&gt;Herunterladen:&lt;br&gt;%2&lt;br&gt;&lt;br&gt;SHA256 Hash:&lt;br&gt;%3</translation>
     </message>
     <message>
         <location filename="../main.qml" line="2172"/>
-        <source>New version of Monero is available. Check out getmonero.org</source>
-        <translation>Neue Version von Monero ist verfügbar. Besuchen Sie getmonero.org</translation>
+        <source>New version of swap is available. Check out getswap.org</source>
+        <translation>Neue Version von swap ist verfügbar. Besuchen Sie getswap.org</translation>
     </message>
     <message>
         <location filename="../main.qml" line="2263"/>
